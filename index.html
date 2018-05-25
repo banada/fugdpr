@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="tingle.min.css">
+        <script src="tingle.min.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+        <style>
+            body {
+                font-family: "Varela Round", sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+    </body>
+    <script>
+        let modal = new tingle.modal({
+            footer: true,
+        });
+        modal.setContent("<h1>Are you <strike>over 18</strike> an EU citizen?</h1><img src='eu.png'></img><p>Due to the EU's GDPR regulation, we cannot offer our service to EU citizens. If you are not an EU citizen, please press OK to continue.</p>");
+        modal.addFooterBtn('OK', 'tingle-btn tingle-btn--primary', function() {
+            modal.close();
+        });
+        modal.open();
+    </script>
+</html>
